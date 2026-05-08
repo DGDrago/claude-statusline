@@ -1,41 +1,19 @@
 # Claude Code Statusline
 
-A 3-line statusline for [Claude Code](https://claude.ai/code) in Ubuntu WSL terminal with true-colour ANSI, Nerd Font glyphs, and system stats.
+A 3-line statusline for [Claude Code](https://claude.ai/code) with true-colour ANSI, Nerd Font glyphs, and system stats.
+
+Colours from the [if_tea](https://github.com/JanDeDobbeleer/oh-my-posh) oh-my-posh theme.
 
 ## Preview
 
 ![Claude Code statusline preview](statusline-preview.jpg)
 
-Colours from the [if_tea](https://github.com/JanDeDobbeleer/oh-my-posh) oh-my-posh theme.
+## Variants
 
-## Requirements
-
-- [Claude Code](https://claude.ai/code)
-- Python 3.6+
-- A [Nerd Font](https://www.nerdfonts.com/) in your terminal (e.g. MesloLGS NF, FiraCode NF)
-
-## Install
-
-### 1. Copy files
-
-```bash
-cp statusline.py ~/.claude/
-cp statusline-command.sh ~/.claude/
-chmod +x ~/.claude/statusline.py ~/.claude/statusline-command.sh
-```
-
-### 2. Add to Claude Code settings
-
-`~/.claude/settings.json`:
-
-```json
-{
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.claude/statusline-command.sh"
-  }
-}
-```
+| Variant | OS | Runtime | Shell |
+|---|---|---|---|
+| [`ubuntu-fish/`](ubuntu-fish/) | Ubuntu / WSL | Python 3.6+ | fish / bash |
+| [`windows-omp/`](windows-omp/) | Windows | Node.js | PowerShell / Git Bash |
 
 ## Layout
 
@@ -43,7 +21,19 @@ chmod +x ~/.claude/statusline.py ~/.claude/statusline-command.sh
 
 **Line 2:** Cost → time → day
 
-**Line 3:** Context window usage → session usage → time until rate limit reset
+**Line 3:** Context window usage bar → session usage bar → time until rate limit reset
+
+## Requirements
+
+- [Claude Code](https://claude.ai/code)
+- A [Nerd Font](https://www.nerdfonts.com/) in your terminal (e.g. MesloLGS NF, FiraCode NF)
+- See variant subfolder for runtime requirements
+
+## Install
+
+See `SETUP.md` in the relevant subfolder:
+- [ubuntu-fish/SETUP.md](ubuntu-fish/SETUP.md)
+- [windows-omp/SETUP.md](windows-omp/SETUP.md)
 
 ## License
 
