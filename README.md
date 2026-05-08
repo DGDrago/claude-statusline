@@ -1,6 +1,6 @@
 # Claude Code Statusline
 
-A 3-line statusline for [Claude Code](https://claude.ai/code) with true-colour ANSI, Nerd Font glyphs, and system stats.
+A 3-line statusline for [Claude Code](https://claude.ai/code) in Ubuntu WSL terminal with true-colour ANSI, Nerd Font glyphs, and system stats.
 
 ## Preview
 
