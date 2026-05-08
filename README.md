@@ -4,11 +4,7 @@ A 3-line statusline for [Claude Code](https://claude.ai/code) with true-colour A
 
 ## Preview
 
-```
- Sonnet 4.6  CPU: 3% │ RAM: 0.7/7.4GB  ⧖ 12m 5s  fish  📁 ~/projects
- $0.042 │ © 02:15:30 PM │ Thursday 📅
- ctx          34% used  │  sess      12% used  │ ⧖ 3h 28m
-```
+![Claude Code statusline preview](statusline-preview.jpg)
 
 Colours from the [if_tea](https://github.com/JanDeDobbeleer/oh-my-posh) oh-my-posh theme.
 
