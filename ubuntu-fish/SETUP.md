@@ -1,25 +1,22 @@
-# Claude Code Statusline — Setup Instructions
+# Claude Code Statusline — Ubuntu / fish variant
 
-Requires: Node.js, Nerd Font (e.g. FiraCode Nerd Font, JetBrainsMono NF)
+Requires: Python 3.6+, Nerd Font (e.g. MesloLGS NF, FiraCode NF)
 
 ## Install
 
 ### 1. Copy files
-```
-~/.claude/statusline.js
-~/.claude/statusline-command.sh
-```
 
-On **Windows**: `C:\Users\<you>\.claude\`
-On **Mac/Linux**: `~/.claude/`
-
-### 2. Make script executable (Mac/Linux)
 ```bash
-chmod +x ~/.claude/statusline-command.sh
+cd ubuntu-fish/
+cp statusline.py ~/.claude/
+cp statusline-command.sh ~/.claude/
+chmod +x ~/.claude/statusline.py ~/.claude/statusline-command.sh
 ```
 
-### 3. Add to Claude Code settings
-File: `~/.claude/settings.json`
+### 2. Add to Claude Code settings
+
+`~/.claude/settings.json`:
+
 ```json
 {
   "statusLine": {
@@ -29,24 +26,10 @@ File: `~/.claude/settings.json`
 }
 ```
 
-On **Windows** (Git Bash / WSL):
-```json
-{
-  "statusLine": {
-    "type": "command",
-    "command": "bash C:/Users/<you>/.claude/statusline-command.sh"
-  }
-}
-```
-
 ## Layout
 
-```
-[Sonnet 4.6][CPU: 12% | RAM: 14.2/31.9GB][⧖ 5m 12s][pwsh][📁 ~/projects]
- [$0.042 | © 02:15:30 PM | Thursday 📅]
- [ctx ████████░░░░] [sess ███░░░░░░░░░] ⧖ 2h 45m
-```
+**Line 1:** Model → CPU% │ RAM → session elapsed → shell → current directory
 
-## Colors
-Palette from oh-my-posh `if_tea.omp.json` theme.
-Nerd Font diamond glyphs (requires Nerd Font in terminal).
+**Line 2:** Cost → time → day
+
+**Line 3:** Context window usage bar → session usage bar → time until rate limit reset

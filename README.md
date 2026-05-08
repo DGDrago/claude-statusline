@@ -6,7 +6,11 @@ Colours from the [if_tea](https://github.com/JanDeDobbeleer/oh-my-posh) oh-my-po
 
 ## Preview
 
-![Claude Code statusline preview](statusline-preview.jpg)
+**Ubuntu / fish**
+![Ubuntu fish statusline preview](statusline-preview.jpg)
+
+**Windows / oh-my-posh**
+![Windows omp statusline preview](windows-omp/preview.png)
 
 ## Variants
 
